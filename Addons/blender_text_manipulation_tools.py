@@ -19,6 +19,15 @@ fonts = {
 
     'LIN': [
     
+        "/usr/share/fonts/libertinus/LibertinusSerif-Regular.otf", 
+        "/usr/share/fonts/libertinus/LibertinusSerif-Bold.otf",
+        "/usr/share/fonts/libertinus/LibertinusSerif-Italic.otf",
+        "/usr/share/fonts/libertinus/LibertinusSerif-BoldItalic.otf",
+            ],
+
+    # Deprecated linux-libertine font
+    'LOL': [
+    
         "/usr/share/fonts/ttf-linux-libertine/LinLibertine_R.otf", 
         "/usr/share/fonts/ttf-linux-libertine/LinLibertine_RB.otf",
         "/usr/share/fonts/ttf-linux-libertine/LinLibertine_RI.otf",

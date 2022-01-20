@@ -95,10 +95,19 @@ def SetText(names_lst):
         
         print('Setting line:', content)
         font = font[5:]
-        
+
         if font == 'LIN':
             
             """Linux Libertine"""        
+            regular_font= "/usr/share/fonts/libertinus/LibertinusSerif-Regular.otf" #Filepaths for the fonts
+            bold_font = "/usr/share/fonts/libertinus/LibertinusSerif-Bold.otf"
+            italics_font = "/usr/share/fonts/libertinus/LibertinusSerif-Italic.otf"
+            bold_italics_font = "/usr/share/fonts/libertinus/LibertinusSerif-BoldItalic.otf"
+ 
+        # Deprecated linux-libertine font
+        elif font == 'LOL':
+            
+            """Linux Libertine (deprecated)"""        
             regular_font= "/usr/share/fonts/ttf-linux-libertine/LinLibertine_R.otf" #Filepaths for the fonts
             bold_font = "/usr/share/fonts/ttf-linux-libertine/LinLibertine_RB.otf"
             italics_font = "/usr/share/fonts/ttf-linux-libertine/LinLibertine_RI.otf"
