@@ -64,7 +64,8 @@ def SetResolutionOutput():
     scene.render.resolution_y = 2160
     scene.render.resolution_percentage = 50
     scene.frame_end = 600 
-    scene.render.fps = 60 # Int only up to v3.0. Need to set fps_base to get 59.94.
+    scene.render.fps = 60 # Int only up to v3.0 . Need to set fps_base, belowm, to get 59.94.
+    scene.render.fps_base = 1.0010000467300415 # The value for all fractional fps presets. Default/ non-fractional is 1.0
     scene.render.image_settings.file_format = 'PNG'
     scene.render.image_settings.color_depth = '16'
 
