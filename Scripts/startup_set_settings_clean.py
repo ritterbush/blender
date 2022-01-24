@@ -64,7 +64,7 @@ def SetResolutionOutput():
     scene.render.resolution_y = 2160
     scene.render.resolution_percentage = 50
     scene.frame_end = 600 
-    scene.render.fps = 60
+    scene.render.fps = 60 # Int only in v3.0. Will be 59.94 by default until a round number is selected from dropdown.
     scene.render.image_settings.file_format = 'PNG'
     scene.render.image_settings.color_depth = '16'
 
