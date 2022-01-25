@@ -245,6 +245,14 @@ def AddMaterials():
         fridge.node_tree.nodes["Principled BSDF"].inputs[4].default_value = 0.3 #Metallic
         fridge.node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0.2 #Roughness
 
+        """Creates gold material"""
+        gold = bpy.data.materials.new(name="Gold")
+        gold.use_nodes = True #Required for the below cmds to work
+        
+        gold.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.98, 0.98, 0.98, 1) #Gold base Color; HEX = E7C989
+        gold.node_tree.nodes["Principled BSDF"].inputs[4].default_value = 1 #Metallic
+        gold.node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0.444 #Roughness
+
         """Creates Basic Primary Colors Materials"""
         red = bpy.data.materials.new(name="Red")
         green = bpy.data.materials.new(name="Green")
@@ -276,6 +284,7 @@ def AddCubesForMaterials():
         'Reflective Metal', 
         'Space Black', 
         'Fridge White', 
+        'Gold', 
         'Red', 
         'Green', 
         'Blue',
