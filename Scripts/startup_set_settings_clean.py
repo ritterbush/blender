@@ -176,7 +176,7 @@ def AddMaterials():
 
         # Get both default nodes and set color and location
         principled_bsdf = material.node_tree.nodes.get('Principled BSDF')
-        principled_bsdf.inputs[0].default_value = default_value = (1.0, 0.0, 0.0, 1) #Red base Color; HEX = FF0000
+        principled_bsdf.inputs['Base Color'].default_value = default_value = (1.0, 0.0, 0.0, 1) #Red base Color; HEX = FF0000
         material_output = material.node_tree.nodes.get('Material Output')
         material_output.location = [600, 300] 
         
@@ -201,57 +201,57 @@ def AddMaterials():
         metallic_green = bpy.data.materials.new(name="Metallic Green")
         metallic_green.use_nodes = True #Required for the below cmds to work
         
-        bpy.data.materials["Metallic Green"].node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.000303477, 0.799103, 0.412543, 1) #Aqua greenish base Color; HEX = 01E7AC
-        bpy.data.materials["Metallic Green"].node_tree.nodes["Principled BSDF"].inputs[4].default_value = 0.9 #Metallic
-        bpy.data.materials["Metallic Green"].node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0.3 #Roughness
+        bpy.data.materials["Metallic Green"].node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (0.000303477, 0.799103, 0.412543, 1) #Aqua greenish base Color; HEX = 01E7AC
+        bpy.data.materials["Metallic Green"].node_tree.nodes["Principled BSDF"].inputs['Metallic'].default_value = 0.9 
+        bpy.data.materials["Metallic Green"].node_tree.nodes["Principled BSDF"].inputs['Roughness'].default_value = 0.3 
 
         """Creates Metallic Lime Material"""
         metallic_lime = bpy.data.materials.new(name="Metallic Lime")
         metallic_lime.use_nodes = True #Required for the below cmds to work
         
-        metallic_lime.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0, 1, 0.065, 1) #lIME base Color; HEX = 00FF48
-        metallic_lime.node_tree.nodes["Principled BSDF"].inputs[4].default_value = 0.9 #Metallic
-        metallic_lime.node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0.2 #Roughness
+        metallic_lime.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (0, 1, 0.065, 1) #lIME base Color; HEX = 00FF48
+        metallic_lime.node_tree.nodes["Principled BSDF"].inputs['Metallic'].default_value = 0.9 
+        metallic_lime.node_tree.nodes["Principled BSDF"].inputs['Roughness'].default_value = 0.2 
 
         """Creates Metallic Black Material"""
         metallic_black = bpy.data.materials.new(name="Metallic Black")
         metallic_black.use_nodes = True #Required for the below cmds to work
         
-        metallic_black.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0, 0, 0, 1) #Black base Color; HEX = 000000
-        metallic_black.node_tree.nodes["Principled BSDF"].inputs[4].default_value = 0.8 #Metallic
-        metallic_black.node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0.1 #Roughness
+        metallic_black.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (0, 0, 0, 1) #Black base Color; HEX = 000000
+        metallic_black.node_tree.nodes["Principled BSDF"].inputs['Metallic'].default_value = 0.8 
+        metallic_black.node_tree.nodes["Principled BSDF"].inputs['Roughness'].default_value = 0.1 
 
         """Creates Reflective Metal Material"""
         material = bpy.data.materials.new(name="Reflective Metal")
         material.use_nodes = True #Required for the below cmds to work
         
-        material.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (1, 1, 1, 1) #Reflect; HEX = FFFFFF
-        material.node_tree.nodes["Principled BSDF"].inputs[4].default_value = 1 #Metallic
-        material.node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0 #Roughness
+        material.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (1, 1, 1, 1) #Reflect; HEX = FFFFFF
+        material.node_tree.nodes["Principled BSDF"].inputs['Metallic'].default_value = 1 
+        material.node_tree.nodes["Principled BSDF"].inputs['Roughness'].default_value = 0 
 
         """Creates Space Black Material"""
         material = bpy.data.materials.new(name="Space Black")
         material.use_nodes = True #Required for the below cmds to work
         
-        material.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.184, 0.184, 0.184, 1) #Grey; HEX = 777777
-        material.node_tree.nodes["Principled BSDF"].inputs[4].default_value = 0.99 #Metallic
-        material.node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0.01 #Roughness
+        material.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (0.184, 0.184, 0.184, 1) #Grey; HEX = 777777
+        material.node_tree.nodes["Principled BSDF"].inputs['Metallic'].default_value = 0.99 
+        material.node_tree.nodes["Principled BSDF"].inputs['Roughness'].default_value = 0.01 
 
         """Creates refrigerator white material, highly optional for letters"""
         fridge = bpy.data.materials.new(name="Fridge White")
         fridge.use_nodes = True #Required for the below cmds to work
         
-        fridge.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.98, 0.98, 0.98, 1) #White base Color; HEX = EEEEEE
-        fridge.node_tree.nodes["Principled BSDF"].inputs[4].default_value = 0.3 #Metallic
-        fridge.node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0.2 #Roughness
+        fridge.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (0.98, 0.98, 0.98, 1) #White base Color; HEX = EEEEEE
+        fridge.node_tree.nodes["Principled BSDF"].inputs['Metallic'].default_value = 0.3 
+        fridge.node_tree.nodes["Principled BSDF"].inputs['Roughness'].default_value = 0.2 
 
         """Creates gold material"""
         gold = bpy.data.materials.new(name="Gold")
         gold.use_nodes = True #Required for the below cmds to work
 
-        gold.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0.799, 0.584, 0.250, 1) #Gold base Color; HEX = E7C989
-        gold.node_tree.nodes["Principled BSDF"].inputs[4].default_value = 1 #Metallic
-        gold.node_tree.nodes["Principled BSDF"].inputs[7].default_value = 0.444 #Roughness
+        gold.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (0.799, 0.584, 0.250, 1) #Gold base Color; HEX = E7C989
+        gold.node_tree.nodes["Principled BSDF"].inputs['Metallic'].default_value = 1 
+        gold.node_tree.nodes["Principled BSDF"].inputs['Roughness'].default_value = 0.444 
 
         """Creates Basic Primary Colors Materials"""
         red = bpy.data.materials.new(name="Red")
@@ -262,9 +262,9 @@ def AddMaterials():
         green.use_nodes = True #Required for the below cmds to work
         blue.use_nodes = True #Required for the below cmds to work
         
-        red.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (1, 0, 0, 1) #HEX = FF0000
-        green.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0, 1, 0, 1)  #HEX = 00FF00
-        blue.node_tree.nodes["Principled BSDF"].inputs[0].default_value = (0, 0, 1, 1) #HEX = 0000FF
+        red.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (1, 0, 0, 1) #HEX = FF0000
+        green.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (0, 1, 0, 1)  #HEX = 00FF00
+        blue.node_tree.nodes["Principled BSDF"].inputs['Base Color'].default_value = (0, 0, 1, 1) #HEX = 0000FF
 
 
 def AddCubesForMaterials():    
